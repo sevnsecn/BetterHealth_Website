@@ -17,7 +17,7 @@ unset($_SESSION['old'], $_SESSION['errors']);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nurfans</title>
+  <title>Login</title>
 </head>
 <body>
   <?php if (!empty($errors)): ?>
@@ -28,41 +28,17 @@ unset($_SESSION['old'], $_SESSION['errors']);
     </ul>
   <?php endif; ?>
 
-  <form action="action.php" method="POST" onsubmit="return confirmSubmit()">
+  <form action="action.php" method="POST">
 
-    <label for="name">Enter Your Full Name:</label>
+    <label for="name">Your Username:</label>
     <input name="name" type="text" value="<?php echo htmlspecialchars($name); ?>">
     <br>
 
-    <label for="email">Enter Your Email Address:</label>
+    <label for="email">Email Address:</label>
     <input name="email" type="email" value="<?php echo htmlspecialchars($email); ?>">
     <br>
 
-    <label>List Your Subscription Preferences:</label><br>
-    <?php
-    $topics = ["technology", "sports", "business", "health", "entertainment"];
-    foreach ($topics as $topic) {
-        $checked = in_array($topic, $preferences) ? "checked" : "";
-        echo "<input name='preferences[]' type='checkbox' value='$topic' $checked> <label>" . ucfirst($topic) . "</label><br>";
-    }
-    ?>
-
-    <label>List Your Subscription Plans:</label><br>
-    <input type="radio" name="subscriptionPlan" value="free" id="free" <?php if ($subscriptionPlan === "free") echo "checked"; ?>>
-    <label for="free">Free Plan</label><br>
-    <input type="radio" name="subscriptionPlan" value="premium" id="premium" <?php if ($subscriptionPlan === "premium") echo "checked"; ?>>
-    <label for="premium">Premium Plan</label>
-    <br>
-
-    <label for="contactMethod">Preferred Contact Method:</label>
-    <select name="contactMethod">
-      <option value="Email" <?php if ($contactMethod === "Email") echo "selected"; ?>>Email</option>
-      <option value="SMS" <?php if ($contactMethod === "SMS") echo "selected"; ?>>SMS</option>
-      <option value="Email & SMS" <?php if ($contactMethod === "Email & SMS") echo "selected"; ?>>Email & SMS</option>
-    </select>
-    <br>
-
-    <label for="termsAgreement">Terms & Conditions Agreement:</label>
+    <label for="termsAgreement">Agree to our Terms & Conditions:</label>
     <input name="termsAgreement" type="checkbox" value="accepted" <?php if ($termsAgreement) echo "checked"; ?>>
     <label for="termsAgreement">Agree</label>
     <br>
@@ -71,10 +47,5 @@ unset($_SESSION['old'], $_SESSION['errors']);
     <button type="reset" name="clear" value="clear">Clear Form</button>
   </form>
 
-  <script>
-    function confirmSubmit() {
-      return confirm("Matte Kudasai! Are you sure you want to submit?");
-    }
-  </script>
 </body>
 </html>
