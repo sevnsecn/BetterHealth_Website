@@ -1,3 +1,5 @@
+<!-- Barebones -->
+
 <!DOCTYPE html>
 <html>
   <head> 
@@ -11,7 +13,6 @@
         }
     </style>
 </head>
-  <!-- Barebones -->
   <body>
     <form action="action.php" method="post"> 
       <label for="username"> Enter Your Username: </label>
@@ -23,6 +24,8 @@
 
       <label for="email"> Email: </label>
       <input name="email" type="email" id="email" required>
+
+      <input type="submit" value="submit">
       
     </form>
   </body>
