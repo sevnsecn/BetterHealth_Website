@@ -1,0 +1,79 @@
+# Query: index.html
+# ContextLines: 1
+
+17 results - 7 files
+
+BetterHealth\html\about.html:
+  37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  38:                <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+  39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+  44                       <li class="nav-item active">
+  45:                         <a class="nav-link" href="index.php">Home</a>
+  46                       </li>
+
+  98                       <ul>
+  99:                         <li><a href="index.php">Home</a></li>
+  100                          <li><a href="about.html">About Us</a></li>
+
+BetterHealth\html\article_1.html:
+  37         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  38:           <div class="logo"><a href="index.php"><img src="images/newLogo.png"></a></div>
+  39            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+  44                  <li class="nav-item active">
+  45:                    <a class="nav-link" href="index.php">Home</a>
+  46                  </li>
+
+BetterHealth\html\contact.html:
+   37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   38:                <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+   39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+   44                       <li class="nav-item active">
+   45:                         <a class="nav-link" href="index.php">Home</a>
+   46                       </li>
+
+  117                       <ul>
+  118:                         <li><a href="index.php">Home</a></li>
+  119                          <li><a href="about.html">About Us</a></li>
+
+BetterHealth\html\gallery.html:
+   37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   38:                <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+   39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+   44                       <li class="nav-item active">
+   45:                         <a class="nav-link" href="index.php">Home</a>
+   46                       </li>
+
+  181                       <ul>
+  182:                         <li><a href="index.php">Home</a></li>
+  183                          <li><a href="about.html">About Us</a></li>
+
+BetterHealth\html\index.html:
+  37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  38:                <div class="logo"><a href="index.php"><img src="images/newLogo.png"></a></div>
+  39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+BetterHealth\html\index.php:
+  37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  38:                <div class="logo"><a href="index.php"><img src="images/newLogo.png"></a></div>
+  39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+  44                       <li class="nav-item active">
+  45:                         <a class="nav-link" href="index.php">Home</a>
+  46                       </li>
+
+BetterHealth\html\services.html:
+   37              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   38:                <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+   39                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+
+   44                       <li class="nav-item active">
+   45:                         <a class="nav-link" href="index.php">Home</a>
+   46                       </li>
+
+  128                       <ul>
+  129:                         <li><a href="index.php">Home</a></li>
+  130                          <li><a href="about.html">About Us</a></li>
