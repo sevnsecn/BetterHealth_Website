@@ -1,5 +1,4 @@
-<!-- Barebones -->
-
+<!-- Barebones NO MORE!! -->
 
 <?php // display succes message after signup, will not display otherwise
 session_start();
@@ -33,6 +32,7 @@ unset($_SESSION['success']);
 <?php endif; ?>
 
   <form method="post" action="action.php">
+  <input type="hidden" name="action" value="login">
     <label for="username"> Username </label>
     <input name="username" id="username" type="text" required>
 
