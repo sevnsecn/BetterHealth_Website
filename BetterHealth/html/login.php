@@ -6,6 +6,20 @@ $success = $_SESSION['success'] ?? '';
 unset($_SESSION['success']);
 ?>
 
+<?php
+$errors = $_SESSION['errors'] ?? [];
+unset($_SESSION['errors']);
+?>
+
+<?php if (!empty($errors)): ?>
+  <ul style="color: red;">
+    <?php foreach ($errors as $error): ?>
+      <li><?= htmlspecialchars($error) ?></li>
+    <?php endforeach; ?>
+  </ul>
+<?php endif; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

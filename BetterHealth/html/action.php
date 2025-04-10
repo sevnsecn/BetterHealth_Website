@@ -1,7 +1,8 @@
 <?php
 session_start();
 // add the files u want to store here
-require_once 'validate.php'; 
+require_once 'signup_validate.php'; 
+require_once 'login_validate.php'; 
 
 $action = $_POST['action'] ?? '';
 
@@ -11,9 +12,9 @@ switch ($action) {
         validate(); // this handles validation and redirection
         break;
 
-        // case 'login':
-            // login();  // FOR ARTHUR: bikin login_validate.php
-       // break;
+    case 'login':
+        login();  // FOR ARTHUR: bikin login_validate.php
+    break;
 
     default:
         // Optional: Handle unknown or empty actions
