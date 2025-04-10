@@ -12,13 +12,8 @@ switch ($action) {
         break;
 
         case 'login':
-            login(); 
+            login();  // FOR ARTHUR: bikin login_validate.php
         break;
-
-        /*case 'ex':
-            example(); 
-            break;
-        */
 
     default:
         // Optional: Handle unknown or empty actions

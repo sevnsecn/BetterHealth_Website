@@ -1,5 +1,4 @@
-<!-- Barebones -->
-
+<!-- Barebones NO MORE!! -->
 
 <?php // display succes message after signup, will not display otherwise
 session_start();
