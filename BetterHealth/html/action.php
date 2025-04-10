@@ -18,7 +18,7 @@ switch ($action) {
 
     default:
         // Optional: Handle unknown or empty actions
-        $_SESSION['errors'] = ["Unknown action or no action provided."];
+        $_SESSION['errors'] = ["There is was no action provided."];
         header("Location: signup.php"); // or any fallback page
         exit;
 }
