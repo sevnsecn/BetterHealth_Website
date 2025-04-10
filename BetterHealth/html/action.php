@@ -11,6 +11,10 @@ switch ($action) {
         validate(); // this handles validation and redirection
         break;
 
+        case 'login':
+            login(); 
+        break;
+
         /*case 'ex':
             example(); 
             break;

@@ -2,17 +2,11 @@
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "";
-    $db_name = "BetterHealth";
+    $db_name = "betterhealth";
 
-    $conn = "";
+    $GLOBALS['conn'] = new mysqli($db_server, $db_user, $db_pass, $db_name);
 
-    try{
-        $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+    if ($GLOBALS['conn']->connect_error) {
+        die("Connection failed: " . $GLOBALS['conn']->connect_error);
     }
-    catch(mysqli_sql_exception) {
-        echo "Could not connect!";
-    }
-
-    if($conn){
-        echo "You are connected."; 
-    }
+    ?>

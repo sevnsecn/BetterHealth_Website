@@ -33,6 +33,7 @@ unset($_SESSION['success']);
 <?php endif; ?>
 
   <form method="post" action="action.php">
+  <input type="hidden" name="action" value="login">
     <label for="username"> Username </label>
     <input name="username" id="username" type="text" required>
 
