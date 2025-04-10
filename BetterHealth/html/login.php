@@ -1,5 +1,12 @@
 <!-- Barebones -->
 
+
+<?php // display succes message after signup, will not display otherwise
+session_start();
+$success = $_SESSION['success'] ?? '';
+unset($_SESSION['success']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +23,15 @@
   </style>
 
 </head>
+
+
+
 <body>
+
+<?php if (!empty($success)): ?>
+  <p style="color: green;"><?= htmlspecialchars($success) ?></p>
+<?php endif; ?>
+
   <form method="post" action="action.php">
     <label for="username"> Username </label>
     <input name="username" id="username" type="text" required>
