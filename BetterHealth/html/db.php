@@ -14,5 +14,5 @@
     }
 
     if($conn){
-        echo "You are connected.";
+        echo "You are connected."; 
     }

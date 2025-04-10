@@ -259,7 +259,9 @@ button {
     color: #fff;
 }
 
-.logo {}
+/* .logo {
+    
+} 
 
 /* header section end */
 
@@ -582,14 +584,20 @@ a:hover {
 
 .box_main .house_icon .image_2 {
     display: none;
+    width: 400px;
+    height: 400px
 }
 
 .box_main:hover .house_icon .image_2 {
     display: block;
+    width: 400px;
+    height: 400px
 }
 
 .box_main:hover .house_icon .image_1 {
     display: none;
+    width: 400px;
+    height: 400px
 }
 
 .box_main:hover {
@@ -1018,3 +1026,45 @@ a:hover {
     float: left;
     margin: 10px;
 }
+
+.tutor-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .tutor-card {
+    text-align: center;
+    max-width: 250px;
+  }
+  
+  .tutor-card img {
+    display: block;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tutor-card h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.2rem;
+    color: #25546a;
+  }
+  
+  .tutor-card p {
+    color: #ff5454;
+  }
+
+  .tutor-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+

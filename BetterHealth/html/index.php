@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -169,7 +171,6 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="gallery_taital">Our Guides</h1>
-                  <p class="gallery_text">---</p>
                </div>
             </div>
             <div class="">
@@ -206,64 +207,58 @@
                </div>
 
                <!-- End of div: Copy here-->
-
                
                
-      
 
             </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
+
+            <!-- JANGAN DIHAPUS: PHP logic for see more button -->
+            <div class="seemore_bt">
+            <a href="<?php echo isset($_SESSION['user_id']) ? 'article_gallery.php' : 'signup.php'; ?>"> See More </a>
+            </div>
+
          </div>
       </div>
       <!-- gallery section end -->
-      <!-- services section start -->
+      <!-- TUTORS section start -->
       <div class="services_section layout_padding" id="service">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="services_taital">Tutors</h1>
-                  <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
+                  <p class="services_text">Our tutors can help you streamline your fitness journey and get you from zero to hero in no time. </p>
                </div>
             </div>
-            <div class="services_section_2">
-               <div class="row">
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main active">
-                        <div class="house_icon">
-                           <img src="images/icon1.png" class="image_1">
-                           <img src="images/icon1.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">Original Coffee</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main">
-                        <div class="house_icon">
-                           <img src="images/icon2.png" class="image_1">
-                           <img src="images/icon2.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">20 Coffee Flavors</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-12 col-md-4">
-                     <div class="box_main">
-                        <div class="house_icon">
-                           <img src="images/icon3.png" class="image_1">
-                           <img src="images/icon3.png" class="image_2">
-                        </div>
-                        <h3 class="decorate_text">Pleasant Abient</h3>
-                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+
          </div>
-      </div>
+
+         <section id="tutors" class="tutor-section">
+
+         <div class="tutor-card">
+         <img src="images/tutor_1.jpg" alt="Tutor 1" class="image">
+         <h3 class="services_taital">Kevin Magnussen</h3>
+         <p class="services_taital">Biology Student</p>
+         </div>
+
+         <div class="tutor-card">
+         <img src="images/tutor_2.jpg" alt="Tutor 2">
+         <h3 class="services_taital">Brennan Hook</h3>
+         <p>Gooning Expert</p>
+         </div>
+
+         <div class="tutor-card">
+         <img src="images/tutor_3.jpg" alt="Tutor 3">
+         <h3 class="services_taital">Charli YxY </h3>
+         <p>Powerlifter</p>
+         </div>
+
+         </section>
+
+         </div>
+            
+           
+
+      
       <!-- services section end -->
       <!-- testimonial section start -->
       <div class="client_section layout_padding">
@@ -347,10 +342,10 @@
                            <input type="text" class="email-bt" placeholder="Email" name="Email">
                         </div>
                         <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                           <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
                         </div>
                         <div class="form-group">
-                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                           <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
                         </div>
                         <div class="send_btn">
                            <div type="text" class="main_bt"><a href="#">SEND</a></div>
@@ -384,10 +379,27 @@
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#service">Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="signup.php">Register</a></li>
+
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <li class="nav-item">
+                       <a class="nav-link" href="account.php">Account</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                        <?php else: ?>
+                        <li class="nav-item">
+                       <a href="signup.php">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                       <a href="login.php">Login</a>
+                        </li>
+                        <?php endif; ?>
                      </ul>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6">
+               <div class="col-lg-3 col-sm-6 footer_menu">
                   <h1 class="useful_text">Useful Links</h1>
                   <p class="dummy_text"><a href="https://www.youtube.com/@Talon_Fitness">Talon_Fitness</a></p>
                </div>
@@ -396,17 +408,17 @@
                   <div class="location_text">
                      <ul>
                         <li>
-                           <a href="#">
+                           <a href="https://youtu.be/L_ByGeT4Qzk">
                            <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : The Prominence Office Tower, Jl. Jalur Sutera Bar. No.15, RT.003/RW.006, Panunggangan Tim., Kec. Pinang, Kota Tangerang, Banten 15143</span>
                            </a>
                         </li>
                         <li>
-                           <a href="#">
+                           <a href="https://youtu.be/L_ByGeT4Qzk">
                            <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +62 810 0928 1882</span>
                            </a>
                         </li>
                         <li>
-                           <a href="#">
+                           <a href="https://youtu.be/L_ByGeT4Qzk">
                            <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : betterhelp@gmail.com</span>
                            </a>
                         </li>
