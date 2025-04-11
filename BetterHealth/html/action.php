@@ -9,11 +9,11 @@ $action = $_POST['action'] ?? '';
 //using cases we can put multiple functions here
 switch ($action) {
     case 'signup':
-        validate(); // this handles validation and redirection
+        validate(); // this handles signup validation and redirection
         break;
 
     case 'login':
-        login();  // FOR ARTHUR: bikin login_validate.php
+        login(); // handles login_validation
     break;
 
     default:
