@@ -11,9 +11,9 @@ switch ($action) {
         validate(); // this handles validation and redirection
         break;
 
-        case 'login':
-            login();  // FOR ARTHUR: bikin login_validate.php
-        break;
+        // case 'login':
+            // login();  // FOR ARTHUR: bikin login_validate.php
+       // break;
 
     default:
         // Optional: Handle unknown or empty actions
