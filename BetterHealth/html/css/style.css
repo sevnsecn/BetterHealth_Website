@@ -531,6 +531,30 @@ img.image {
     color: #ffffff;
 }
 
+/* SEE MORE FOR TUTORS */
+
+.seemore_tut {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+
+.seemore_tut a {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #8f1515;
+    padding: 10px 0px;
+    margin-top: 40px;
+}
+
+.seemore_tut a:hover {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
 a:hover {
     color: #f76d37;
     text-decoration: underline;

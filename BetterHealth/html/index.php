@@ -11,7 +11,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>BetterHealt</title>
+      <title>BetterHealth Baby!!!</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -43,51 +43,46 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#about_us">About Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Guides</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Tutors</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="signup.php">Sign Up</a>
-                     </li>
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#gallery">Guides</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#service">Tutors</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
 
-                     <?php if (isset($_SESSION['user_id'])): ?>
-                     <li class="nav-item">
-                       <a class="nav-link" href="account.php">Account</a>
-                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link" href="logout.php">Logout</a>
-                     </li>
-                     <?php else: ?>
-                     <li class="nav-item">
-                       <a class="nav-link" href="signup.php">Sign Up</a>
-                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link" href="login.php">Login</a>
-                     </li>
-                     <?php endif; ?>
+                        <!-- PHP -->
 
-                     <?php if (isset($_SESSION['username'])): ?>
-                     <li class="nav-item">
-                     <a class="nav-link disabled" href="#">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</a>
-                     </li>
-                     <?php endif; ?>
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <!-- Show only when logged in -->
+                        <li class="nav-item">
+                           <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="account.php">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</a>
+                        </li>
+                        <?php else: ?>
+                        <!-- Show only when NOT logged in -->
+                        <li class="nav-item">
+                           <a class="nav-link" href="signup.php">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="login.php">Login</a>
+                        </li>
+                        <?php endif; ?>
 
-                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                     </li>
-                     
+                        <li class="nav-item">
+                           <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </li>
+                        
                   </ul>
                </div>
             </nav>
@@ -227,33 +222,35 @@
                <div class="col-sm-12">
                   <h1 class="services_taital">Tutors</h1>
                   <p class="services_text">Our tutors can help you streamline your fitness journey and get you from zero to hero in no time. </p>
+
+                  <section id="tutors" class="tutor-section">
+
+                  <div class="tutor-card">
+                  <img src="images/tutor_1.jpg" alt="Tutor 1">
+                  <h3 class="services_taital">Kevin Magnussen</h3>
+                  <p>Mircobiologist</p>
+                  </div>
+
+                  <div class="tutor-card">
+                  <img src="images/tutor_2.jpg" alt="Tutor 2">
+                  <h3 class="services_taital">Brennan Hook</h3>
+                  <p>Gooning Expert</p>
+                  </div>
+
+                  <div class="tutor-card">
+                  <img src="images/tutor_3.jpg" alt="Tutor 3">
+                  <h3 class="services_taital">Charli YxY </h3>
+                  <p>Powerlifter</p>
+                  </div>
+
+                  </section>
+                  <div class="seemore_tut seemore_bt">
+                  <a href="<?php echo isset($_SESSION['user_id']) ? 'article_gallery.php' : 'tutors.php'; ?>"> See More </a>
+                  </div>
+
                </div>
             </div>
-
          </div>
-
-         <section id="tutors" class="tutor-section">
-
-         <div class="tutor-card">
-         <img src="images/tutor_1.jpg" alt="Tutor 1" class="image">
-         <h3 class="services_taital">Kevin Magnussen</h3>
-         <p class="services_taital">Biology Student</p>
-         </div>
-
-         <div class="tutor-card">
-         <img src="images/tutor_2.jpg" alt="Tutor 2">
-         <h3 class="services_taital">Brennan Hook</h3>
-         <p>Gooning Expert</p>
-         </div>
-
-         <div class="tutor-card">
-         <img src="images/tutor_3.jpg" alt="Tutor 3">
-         <h3 class="services_taital">Charli YxY </h3>
-         <p>Powerlifter</p>
-         </div>
-
-         </section>
-
          </div>
             
            

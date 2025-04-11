@@ -35,7 +35,7 @@ function login() {
             // Login successful
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            header("Location: dashboard.php"); // change to wherever you want to go after login
+            header("Location: dashboard.php"); // change to wherever you want to go after login (NICE JOB)
             exit;
         } else {
             $errors[] = "Invalid password.";
