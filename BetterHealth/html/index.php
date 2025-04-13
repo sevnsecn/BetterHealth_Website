@@ -64,7 +64,7 @@
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Show only when logged in -->
                         <li class="nav-item">
-                           <a class="nav-link" href="logout.php">Logout</a>
+                           <a class="nav-link" href="logout.php" onclick="return confirmLogout();">Logout</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="account.php">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</a>
@@ -371,34 +371,52 @@
                   <h3 class="useful_text">Menu</h3>
                   <div class="footer_menu">
                      <ul>
+                        <!-- Show regardless -->
                         <li><a href="#">Home</a></li>
                         <li><a href="#about_us">About Us</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#service">Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="signup.php">Register</a></li>
 
-                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <?php if (isset($_SESSION['user_id'])): ?> <!--Show when logged in -->
+                        <li><a class="footer_menu" href="account.php"> Account</a> </li>
+                        <li><a class="footer_menu" href="logout.php" onclick="return confirmLogout();"> Logout</a> </li>
+                        <?php else: ?> <!--Show when NOT logged in -->
                         <li class="nav-item">
-                       <a class="nav-link" href="account.php">Account</a>
+                        <a href="signup.php">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                        </li>
-                        <?php else: ?>
-                        <li class="nav-item">
-                       <a href="signup.php">Sign Up</a>
-                        </li>
-                        <li class="nav-item">
-                       <a href="login.php">Login</a>
+                        <a href="login.php">Login</a>
                         </li>
                         <?php endif; ?>
                      </ul>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6 footer_menu">
+
+               <!-- Fix spacing issue (Same Solution as above--> 
+               <div class="col-lg-3 col-sm-6">
+                  <div class="footer_menu"> 
                   <h1 class="useful_text">Useful Links</h1>
-                  <p class="dummy_text"><a href="https://www.youtube.com/@Talon_Fitness">Talon_Fitness</a></p>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://www.youtube.com/@Talon_Fitness">Talon Fitness</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://www.youtube.com/@Talon_Fitness">Muscle Mommy</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://www.youtube.com/@Talon_Fitness">Muscle Mommy</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://www.youtube.com/@Talon_Fitness">Muscle Mommy</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="https://www.youtube.com/@Talon_Fitness">Muscle Mommy</a>
+                  </li>
+                  </div>
+                  
+                  
+                  <!-- <p class="dummy_text nav-item"><a href="">Talon_Fitness</a></p>
+                  <p class="nav-item"><a href="https://www.youtube.com/@Talon_Fitness">Muscle Mommy</a></p> -->
                </div>
                <div class="col-lg-3 col-sm-6">
                   <h1 class="useful_text">Contact Us</h1>
@@ -429,7 +447,7 @@
       <!-- copyright section start -->
       <div class="copyright_section">
          <div class="container">
-            <p class="copyright_text">2025 All Rights Reserved. Design definitely not by Rafael</p>
+            <p class="copyright_text">2025 All Rights Reserved.</p>
          </div>
       </div>
       <!-- copyright section end -->
@@ -442,5 +460,13 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>     
+      <!--Logout confirmation -->
+      <script>
+      function confirmLogout() {
+      return confirm("Are you sure you want to log out?");
+      }
+      </script>
+
+</body>
    </body>
 </html>

@@ -112,7 +112,7 @@ if (!isset($_SESSION['username'])) {
     <h1>BetterHealth</h1>
     <div class="nav-links">
         <a href="index.php">Home</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php" onclick="return confirmLogout();">Logout</a>
     </div>
 </header>
 
@@ -130,5 +130,11 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
+      <!--Logout confirmation -->
+      <script>
+      function confirmLogout() {
+      return confirm("Are you sure you want to log out?");
+      }
+      </script>
 </body>
 </html>
