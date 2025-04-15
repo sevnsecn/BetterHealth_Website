@@ -1,9 +1,9 @@
 <?php
-function login() {
-    require_once 'db.php';
-    $conn = $GLOBALS['conn'];
-    session_start();
+session_start();
+require_once 'db.php'; // Database connection
 
+function login() {
+    $conn = $GLOBALS['conn'];
     $username = trim($_POST['username'] ?? '');
     $password = trim($_POST['password'] ?? '');
     $errors = [];
@@ -17,8 +17,8 @@ function login() {
         exit;
     }
 
-    // Prepare and execute SQL statement
-    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = ?");
+    // Prepare SQL statement to check if user exists
+    $stmt = $conn->prepare("SELECT id, username, password, is_admin FROM users WHERE username = ?");
     if (!$stmt) {
         $_SESSION['errors'] = ["Database error: " . $conn->error];
         header("Location: login.php");
@@ -35,7 +35,9 @@ function login() {
             // Login successful
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            header("Location: dashboard.php"); // change to wherever you want to go after login (NICE JOB)
+            $_SESSION['is_admin'] = $user['is_admin']; // Store is_admin in session 
+            //PLEASE ADD IS_ADMIN TO SQL
+            header("Location: dashboard.php"); // Redirect to dashboard
             exit;
         } else {
             $errors[] = "Invalid password.";
@@ -51,3 +53,6 @@ function login() {
     header("Location: login.php");
     exit;
 }
+
+login();
+?>
