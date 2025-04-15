@@ -1,6 +1,7 @@
 <?php
 // article_gallery.php - Public access to the articles
 
+//start db connection
 require_once 'db.php';
 $conn = $GLOBALS['conn'];
 
