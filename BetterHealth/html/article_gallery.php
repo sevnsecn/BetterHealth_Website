@@ -1,6 +1,7 @@
 <?php
 // article_gallery.php - Public access to the articles
 
+//start db connection
 require_once 'db.php';
 $conn = $GLOBALS['conn'];
 
@@ -22,7 +23,7 @@ $result = $stmt->get_result();
         <div>
             <h2><?php echo htmlspecialchars($row['title']); ?></h2>
             <p><?php echo htmlspecialchars($row['content']); ?></p>
-            <p><strong>Published on:</strong> <?php echo htmlspecialchars($row['published_at']); ?></p>
+            <p><strong>Published on:</strong> <?php echo htmlspecialchars($row['created_at']); ?></p>
         </div>
     <?php endwhile; ?>
 </body>

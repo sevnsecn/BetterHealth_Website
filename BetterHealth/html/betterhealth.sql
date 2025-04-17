@@ -56,6 +56,25 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 --
 -- Indexes for dumped tables
 --
+-- Table structure for table `articles`
+--
+
+CREATE TABLE `articles` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `author` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `articles`
+--
+
+INSERT INTO `articles` (`id`, `title`, `author`, `content`, `created_at`) VALUES
+(1, 'boolean', 'wesley', 'devicantik', '2025-04-17 05:29:30');
+
+--
 
 --
 -- Indexes for table `logins`
@@ -73,7 +92,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+-- Indexes for table `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`);
 
+--
 --
 -- AUTO_INCREMENT for table `logins`
 --
@@ -85,7 +109,12 @@ ALTER TABLE `logins`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+-- AUTO_INCREMENT for table `articles`
+ALTER TABLE `articles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
