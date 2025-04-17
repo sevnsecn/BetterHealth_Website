@@ -4,9 +4,10 @@ session_start();
 
 // Start DB connection
 require_once 'db.php';
+$conn = $GLOBALS['conn'];
 
 // Check if user is logged in as admin
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== 1) {
     header("Location: login.php"); // Redirect to login if not admin
     exit;
 }
@@ -15,7 +16,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
 if (isset($_GET['id'])) {
     $articleId = $_GET['id'];
 
-    // Glenn add SQL delete query
+    // SQL delete query
     $stmt = $conn->prepare("DELETE FROM articles WHERE id = ?");
     $stmt->bind_param("i", $articleId);
     $stmt->execute();
@@ -26,4 +27,3 @@ if (isset($_GET['id'])) {
     exit;
 }
 ?>
-

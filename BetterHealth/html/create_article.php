@@ -17,7 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $author = $_POST['author'];
     $content = $_POST['content'];
 
-    //Glenn pls add SQL code here
+// SQL here
+    $stmt = $conn->prepare("INSERT INTO articles (title, author, content) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $title, $author, $content);
+    $stmt->execute();
+    $stmt->close();
 
     // Redirect to the article gallery page after creating the article
     header("Location: article_gallery.php");

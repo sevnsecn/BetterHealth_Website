@@ -36,7 +36,6 @@ function login() {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['is_admin'] = $user['is_admin']; // Store is_admin in session 
-            //Glenn PLEASE ADD IS_ADMIN TO SQL
             header("Location: dashboard.php"); // Redirect to dashboard
             exit;
         } else {
